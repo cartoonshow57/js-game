@@ -1,1 +1,1 @@
-# js-game
+A game of Rock Paper Scissors between You and a Computer
