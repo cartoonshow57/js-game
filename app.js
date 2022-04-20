@@ -62,14 +62,17 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 
-    for (let i = 0; i < 5; i++) {
+    const btns = document.querySelectorAll('button');
+    btns.forEach((button) => {
 
-        const player = prompt("Input Rock, Paper or Scissors... ");
-        const computer = computerPlay();
+        button.addEventListener('click', () => {
 
-        console.log(playRound(player, computer));
-
-    }
+            const textNode = document.createTextNode(playRound(button.value, computerPlay()));
+            let div = document.getElementById("result");
+            div.innerHTML = '';
+            div.appendChild(textNode);
+        })
+    })
 }
 
 game();
