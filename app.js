@@ -62,15 +62,59 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 
+    let player = 0;
+    let computer = 0;
+
     const btns = document.querySelectorAll('button');
     btns.forEach((button) => {
 
         button.addEventListener('click', () => {
 
-            const textNode = document.createTextNode(playRound(button.value, computerPlay()));
-            let div = document.getElementById("result");
-            div.innerHTML = '';
-            div.appendChild(textNode);
+            let text = playRound(button.value, computerPlay());
+
+            if (text.startsWith("You Lose!")) computer++;
+            else if (text.startsWith("Good Job")) player++;
+
+            if (computer === 5 || player === 5) {
+
+                let d1 = document.getElementsByClassName("score")[0];
+                d1.innerHTML = "";
+
+                let d2 = document.getElementsByClassName("res")[0];
+                d2.innerHTML = "";
+
+                let final = document.getElementsByClassName("final-res")[0];
+
+                if (computer === 5) {
+
+                    let text = document.createTextNode("You lost against a bot ROFLMAO\nReloading...");
+                    final.appendChild(text);
+                } else {
+
+                    let text = document.createTextNode("Wow you best a computer!\nReloading...");
+                    final.appendChild(text);
+                }
+
+                btns.forEach((button) => button.setAttribute("disabled", true));
+                setTimeout(() => document.location.reload(), 2000);
+            } else {
+
+                let s1 = document.getElementById("player");
+                let s2 = document.getElementById("computer");
+
+                const t1 = document.createTextNode(player);
+                s1.innerHTML = "";
+                s1.appendChild(t1);
+
+                const t2 = document.createTextNode(computer);
+                s2.innerHTML = "";
+                s2.appendChild(t2);
+
+                const textNode = document.createTextNode(text);
+                let div = document.getElementById("result");
+                div.innerHTML = '';
+                div.appendChild(textNode);
+            }
         })
     })
 }

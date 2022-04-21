@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 
 
 * {
@@ -12,6 +13,18 @@ body {
 
     margin-left: 100px;
     margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: pre;
+}
+
+body > h2 {
+
+    font-size:30px;
+    text-align:center;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .nav {
@@ -31,11 +44,46 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin: 50px 10px;
+}
+
+.score {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.score > h2 {
+
+    display: inline;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.score > span {
+
+    margin: 0 20px;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Cormorant Garond', serif;
+    color:#fbeee0;
 }
 
 .res {
 
     text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.final-res {
+
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Cormorant Garond', serif;
+    text-align: center;
+    line-height: 80px;
 }
 
 #result {
@@ -47,7 +95,7 @@ body {
 
 button {
 
-    width: 180px;
+    width: 160px;
     background-color: #fbeee0;
     font-size: 30px;
     border-radius: 5px;
@@ -56,6 +104,7 @@ button {
     cursor: pointer;
     line-height: 50px;
     text-align: center;
+    margin: 0 30px;
 }
 
 button:hover {
