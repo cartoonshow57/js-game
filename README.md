@@ -1,1 +1,1 @@
-A game of Rock Paper Scissors between You and a Computer
+A game of Rock Paper Scissors between You and Computer
