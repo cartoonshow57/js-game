@@ -87,7 +87,7 @@ function game() {
 
                 if (computer === 5) {
 
-                    let text = document.createTextNode("You lost against a bot ROFLMAO\nReloading...");
+                    let text = document.createTextNode("You lost against a bot\nReloading...");
                     final.appendChild(text);
                 } else {
 

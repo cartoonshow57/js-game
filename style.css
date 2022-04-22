@@ -17,7 +17,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    white-space: pre;
 }
 
 body > h2 {
@@ -82,8 +81,9 @@ body > h2 {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Cormorant Garond', serif;
-    text-align: center;
     line-height: 80px;
+    white-space: pre;
+    text-align: center;
 }
 
 #result {
